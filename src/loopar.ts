@@ -41,7 +41,6 @@ for(let namn of namnlista){
     console.log(namnlista[index] + ": " + prislista[index] + " kr");
     summa = summa + prislista[index];
     index++;
-
 }
 
 console.log("Summa: " + summa + " kr");
