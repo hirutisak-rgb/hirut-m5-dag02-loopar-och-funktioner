@@ -29,6 +29,23 @@ for(let i: number = 1; i <= 10; i++){
 const prislista: number[] = [35, 32, 59, 45];
 const namnlista: string[] = ["Kardemummabulle", "Bryggkaffe", "Ostmacka", "Latte"];
 // TODO
+/*
+for(let i: number = 0; i < prislista.length; i++){
+ console.log(namnlista[i] +": " + prislista[i] + " kr");
+}*/
+
+let index: number = 0;
+let summa: number = 0;
+
+for(let namn of namnlista){
+    console.log(namnlista[index] + ": " + prislista[index] + " kr");
+    summa = summa + prislista[index];
+    index++;
+
+}
+
+console.log("Summa: " + summa + " kr");
+
 
 // UPPGIFT 5 (utmaning): skriv ut en multiplikationstabell för 3:ans tabell,
 //            "3 x 1 = 3" till "3 x 10 = 30".
