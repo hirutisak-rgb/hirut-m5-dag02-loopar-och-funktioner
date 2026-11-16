@@ -44,22 +44,47 @@ export function ärÖppet(veckodag: string, klockslag: number): boolean {
   } else {
     return oppetJustNu = 7 <= klockslag && klockslag <= 18;
   }
-
 }
 
 // 5. Summan av alla tal i listan, med en loop. summa([1, 2, 3]) ger 6.
 export function summa(tal: number[]): number {
   // TODO
+  let sum: number = 0; 
+  for(let i: number = 0; i<tal.length; i++){
+    sum = sum + tal[i];
+  }
+  return sum;
 }
 
 // 6. Medelvärdet. snitt([2, 4, 6]) ger 4. Tom lista ger 0.
 export function snitt(tal: number[]): number {
   // TODO
+  let result: number = 0;
+  if(tal.length === 0){
+    return 0;
+  }
+  for(let i: number = 0; i < tal.length; i++){
+    result = result + tal[i];
+  }
+  return result / tal.length;
 }
 
 // 7. Det största talet, med en loop. största([3, 9, 4]) ger 9. Tom lista ger undefined.
 export function största(tal: number[]): number | undefined {
   // TODO
+
+
+  if(tal.length === 0){
+    return undefined;
+  }
+  
+  let max = tal[0];
+  for(let i: number = 1; i < tal.length; i++){
+    if(tal[i] > max){
+      max = tal[i];
+    }
+  }
+  return max;
 }
 
 // 8. Upprepa en text. upprepa("ab", 3) ger "ababab". Använd en loop.
