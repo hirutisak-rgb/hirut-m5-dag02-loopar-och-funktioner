@@ -29,13 +29,22 @@ export function momsDel(pris: number): number {
 // 3. Priset efter rabatt i procent. medRabatt(100, 10) ger 90.
 export function medRabatt(pris: number, procent: number): number {
   // TODO
-   return Math.round((pris * procent / (pris + procent)) * 100);
+   return Math.round(pris * (1 - procent / 100) * 100 ) / 100;
 }
 
 // 4. Är kaféet öppet? Vardagar 7–18, helger (lördag, söndag) 9–16.
 //    Öppnar vid starttimmen, stänger vid sluttimmen (18 är stängt).
 export function ärÖppet(veckodag: string, klockslag: number): boolean {
   // TODO
+  let arHelg: boolean = veckodag === "lördag" || veckodag === "söndag";
+  let oppetJustNu: boolean;
+
+  if (arHelg) {
+    return oppetJustNu = 9 <= klockslag && klockslag <= 16;
+  } else {
+    return oppetJustNu = 7 <= klockslag && klockslag <= 18;
+  }
+
 }
 
 // 5. Summan av alla tal i listan, med en loop. summa([1, 2, 3]) ger 6.
