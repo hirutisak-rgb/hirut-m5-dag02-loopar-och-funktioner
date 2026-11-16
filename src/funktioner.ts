@@ -104,13 +104,18 @@ export function upprepa(text: string, antal: number): string {
 //    Använd formateraPris från uppgift 1.
 export function kvittorad(namn: string, antal: number, pris: number): string {
   // TODO
+  let total = antal * pris;
+
+  return `${antal} x ${namn}: ${formateraPris(total)} kr`;
 }
 
 // 10. Pilfunktioner. Skriv dem själv med const och =>.
 //     dubbla(4) ger 8. ärJämnt(4) ger true.
 export const dubbla = (n: number): number => {
   // TODO
+  return n * 2;
 };
 export const ärJämnt = (n: number): boolean => {
   // TODO
+  return (n % 2 === 0);
 };
